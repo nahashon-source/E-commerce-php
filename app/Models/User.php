@@ -11,6 +11,8 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+    use HasRoles;//✔️ This adds all Spatie methods like assignRole(), hasRole(), hasPermissionTo(), etc.
+
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     protected $fillable = [
